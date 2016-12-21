@@ -28,23 +28,20 @@
 <script>
     new WOW().init();
     jQuery(document).ready(function(){
-        jQuery('#company').on('click', function(event) {
-            jQuery('#company-name').toggle('show');
-            jQuery('#company-header').toggle('show');
-            jQuery('#original-header').toggle('show');
-            jQuery('#company-description').toggle('show');
-            jQuery('#company-footer').toggle('hide');
-            jQuery('#student-footer').toggle('show');
-            jQuery('#mailchimp').toggle('hide');
+        jQuery('#experiment_link').on('click', function(event) {
+            jQuery('#experiment').show();
+            jQuery('#build').hide();
+            jQuery('#ideas').hide();
         });
-        jQuery('#student').on('click', function(event) {
-            jQuery('#company-name').toggle('hide');
-            jQuery('#company-header').toggle('hide');
-            jQuery('#original-header').toggle('hide');
-            jQuery('#company-description').toggle('hide');
-            jQuery('#company-footer').toggle('show');
-            jQuery('#student-footer').toggle('hide');
-            jQuery('#mailchimp').toggle('show');
+        jQuery('#build_link').on('click', function(event) {
+            jQuery('#build').show();
+            jQuery('#experiment').hide();
+            jQuery('#ideas').hide();
+        });
+        jQuery('#ideas_link').on('click', function(event) {
+            jQuery('#ideas').show();
+            jQuery('#experiment').hide();
+            jQuery('#build').hide();
         });
 
         var gifSource = $('#logo').attr('src'); //get the source in the var
@@ -169,6 +166,16 @@
         color: white;
     }
 
+    #experiment{
+
+    }
+    #build{
+        display: none;
+    }
+    #ideas{
+        display: none;
+    }
+
 </style>
 
     <nav class="navbar navbar-custom wow fadeIn" data-wow-delay=".2s" role="navigation" style="margin-bottom: 0 !important;">
@@ -209,9 +216,9 @@
         <div class="row va vertical-align" style="margin-top: 75px;">
             <div class="col-sm-4 col-sm-offset-2">
                 <div>
-                <div class="homepage-title">LA HACKS</div>
-                <div class="homepage-sub-title">Learn It. Build It.</div>
-                <div class="homepage-info">March 31 - April 2 2017<br>Pauley Pavilion, UCLA</div>
+                    <div class="homepage-title">LA HACKS</div>
+                    <div class="homepage-sub-title">Learn It. Build It.</div>
+                    <div class="homepage-info">March 31 - April 2 2017<br>Pauley Pavilion, UCLA</div>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -256,19 +263,63 @@
 
 
 
-    <section style="padding-top: 200px; padding-bottom: 200px;">
+    <section style="padding-top: 100px; padding-bottom: 100px;">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
+            <div id="experiment">
+                <div class="row va vertical-align" >
+                    <div class="col-sm-6" style="height: 300px;">
 
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            <h1 style="color:#FD5C63; margin-bottom: 0; margin-top: 0;">LA Hackers</h1>
+                            <h2>...experiment and tinker</h2>
+                            <p>They are eager to learn and take advantage of mentorship opportunities.
+                                They’re always up for a challenge, and they’re excited to share their
+                                skills and collaborate with others.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <h1 style="color:#FD5C63; margin-bottom: 0; margin-top: 0;">LA Hackers</h1>
-                    <h2>...experiment and tinker</h2>
-                    <p>They are eager to learn and take advantage of mentorship opportunities.
-                        They’re always up for a challenge, and they’re excited to share their
-                        skills and collaborate with others.</p>
+            </div>
+            <div id="build">
+                <div class="row va vertical-align">
+                    <div class="col-sm-6" style="height: 300px;">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            <h1 style="color:#FD5C63; margin-bottom: 0; margin-top: 0;">LA Hackers</h1>
+                            <h2>...build software and hardware</h2>
+                            <p>They travel the country hacking and sharing their code on Github.
+                                They collaborate with their peers and help first time hackers feel
+                                welcome. If they score some prizes, swag, and jobs along the way,
+                                then hey, that’s a plus!</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div id="ideas">
+                <div class="row va vertical-align" >
+                    <div class="col-sm-6" style="height: 300px;">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            <h1 style="color:#FD5C63; margin-bottom: 0; margin-top: 0;">LA Hackers</h1>
+                            <h2>...are full of ideas</h2>
+                            <p>They love thinking up creative, marketable solutions to
+                                problems, and could even see them through as a business.
+                                They’re excited to collaborate with fellow hackers and
+                                get their hands dirty with market research, user experience,
+                                design, copywriting, and pitch decks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="padding-top: 50px;">
+                <a id="experiment_link">Experiment</a>
+                <a id="build_link">Build</a>
+                <a id="ideas_link">Ideas</a>
             </div>
         </div>
     </section>
