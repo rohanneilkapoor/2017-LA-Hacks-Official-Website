@@ -1,0 +1,264 @@
+html {
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+body{
+    font-family: DIN-Regular;
+    color: #737373;
+}
+
+
+
+
+
+/* TYPOGRAPHY */
+
+h1{
+    font-family: DIN-Bold;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+h2{
+    font-family: DIN-Bold;
+    font-size: 20px;
+
+}
+p{
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+a{
+    color: #FFB900;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+a:hover, a:focus, a:active{
+    color: #FFB900;
+    text-decoration: none;
+    border-bottom: 1px solid #FFB900;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.block{
+    margin-bottom: 32px;
+}
+
+.solo-title{
+    color:#FD5C63;
+    margin-bottom: 15px;
+}
+.accompanied-title{
+    color:#FD5C63;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.gif{
+    width: 100%;
+}
+
+
+
+
+/* NAVIGATION*/
+nav{
+    margin-bottom: 0 !important;
+    z-index: 3;
+}
+a.nav-link{
+    color: #737373;
+}
+a.nav-link:hover, a.nav-link:focus, a.nav-link:active{
+    color: #FD5C63 !important;
+    text-decoration: none !important;
+    border: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+    background: white !important;
+}
+.navbar-nav>li>a{
+    padding: 0 !important;
+}
+
+li{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: DIN-Bold;
+    font-size: 14px;
+    letter-spacing: .875px;
+}
+.la-hacks-logo{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+/* HOMEPAGE */
+
+.homepage-section{
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 6%;
+}
+
+.homepage-title{
+    font-family: DIN-Bold;
+    font-size: 60px;
+    color: #FD5C63;
+    line-height: 60px;
+}
+
+.homepage-sub-title{
+    font-size: 28px;
+    color: #FD5C63;
+}
+.homepage-info{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+/* ALIGNMENT/SPACING */
+
+.va{}
+
+.va.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.va.vertical-align > [class^="col-"],
+.va.vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+}
+.float_center {
+    float: right;
+
+    position: relative;
+    left: -50%; /* or right 50% */
+    text-align: left;
+}
+.float_center > .child {
+    position: relative;
+    left: 50%;
+}
+a.float_center{
+    border: 0 !important;
+}
+.top-section{
+    padding-top: 75px;
+}
+.second-section-block{
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 70%;
+    max-width: 500px;
+}
+.section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.circle-section{
+    padding-top: 50px;
+}
+
+
+
+
+
+
+/* BACKGROUNDS */
+
+.faq-background{
+    background-image: linear-gradient(330deg, #4C4491 0%, #FD5C63 100%);
+    color: white;
+}
+
+.our-values-background{
+    background-image: linear-gradient(345deg, rgba(255,185,0,0.70) 0%, #FD5C63 80%);
+    color: white;"
+}
+
+.top-illustration{
+    width: 100%;
+    max-width: 1500px;
+    display: block;
+    margin: auto;
+}
+.second-illustration{
+    left: 35%;
+    position: absolute;
+}
+
+
+
+
+
+/* BUTTONS */
+
+#experiment{
+
+}
+#build{
+    display: none;
+}
+#ideas{
+    display: none;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #c7c7c7;
+    margin: 10px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+.active-circle-experiment{
+    background-color: #FFB900;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.active-circle-build{
+    background-color: #66BFBF;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.active-circle-ideas{
+    background-color: #4C4491;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
