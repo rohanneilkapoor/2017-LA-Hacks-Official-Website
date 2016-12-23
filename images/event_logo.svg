@@ -19,11 +19,13 @@
                         <rect id="Rectangle" fill="#66BFBF" x="185.990488" y="1" width="75.358215" height="261.329193" rx="7.2"></rect>
                         <rect id="Rectangle" fill="#66BFBF" transform="translate(130.674352, 38.676295) rotate(90.000000) translate(-130.674352, -38.676295) " x="92.9952441" y="-91.9883016" width="75.358215" height="261.329193" rx="7.2"></rect>
                         <rect id="Rectangle-3" fill="#FFFFFF" x="71.9655849" y="72.9602124" width="117.417533" height="117.408768" rx="3.13016949"></rect>
-                        <rect id="Rectangle" fill="#FFB900" x="83.9193084" y="273.118012" width="32.8395891" height="113.881988" rx="7.2"></rect>
-                        <rect id="Rectangle" fill="#FFB900" transform="translate(140.864553, 370.581431) rotate(90.000000) translate(-140.864553, -370.581431) " x="124.444759" y="313.640437" width="32.8395891" height="113.881988" rx="7.2"></rect>
-                        <rect id="Rectangle" fill="#FFB900" x="164.970209" y="273.118012" width="32.8395891" height="113.881988" rx="7.2"></rect>
-                        <rect id="Rectangle" fill="#FFB900" transform="translate(140.864553, 289.536581) rotate(90.000000) translate(-140.864553, -289.536581) " x="124.444759" y="232.595587" width="32.8395891" height="113.881988" rx="7.2"></rect>
-                        <rect id="Rectangle-3" fill="#FFFFFF" x="115.280458" y="304.476821" width="51.1681911" height="51.1643712" rx="3.13016949"></rect>
+                        <g id="yellow_box" transform="translate(83.000000, 273.000000)">
+                            <rect id="Rectangle" fill="#FFB900" x="0.919308357" y="0.118012422" width="32.8395891" height="113.881988" rx="7.2"></rect>
+                            <rect id="Rectangle" fill="#FFB900" transform="translate(57.864553, 97.581431) rotate(90.000000) translate(-57.864553, -97.581431) " x="41.4447588" y="40.6404374" width="32.8395891" height="113.881988" rx="7.2"></rect>
+                            <rect id="Rectangle" fill="#FFB900" x="81.9702092" y="0.118012422" width="32.8395891" height="113.881988" rx="7.2"></rect>
+                            <rect id="Rectangle" fill="#FFB900" transform="translate(57.864553, 16.536581) rotate(90.000000) translate(-57.864553, -16.536581) " x="41.4447588" y="-40.4044126" width="32.8395891" height="113.881988" rx="7.2"></rect>
+                            <rect id="Rectangle-3" fill="#FFFFFF" x="32.2804578" y="31.4768206" width="51.1681911" height="51.1643712" rx="3.13016949"></rect>
+                        </g>
                         <g id="Group" transform="translate(172.634006, 151.043478)">
                             <g id="Group-2" fill="#FD5C63">
                                 <rect id="Rectangle" x="0" y="1" width="51.160623" height="177.416149" rx="7.2"></rect>
