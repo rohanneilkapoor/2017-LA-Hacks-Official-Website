@@ -62,8 +62,14 @@ a:hover, a:focus, a:active{
     margin-bottom: 0;
     margin-top: 0;
 }
-.gif{
+.full-image{
     width: 100%;
+}
+.top-image{
+    width: 90%;
+}
+.sub-image{
+    width: 70%;
 }
 
 
@@ -182,6 +188,16 @@ a.float_center{
 }
 .circle-section{
     padding-top: 50px;
+}
+
+.hline {
+    margin-bottom: 20px;
+    width:50px;
+    height:5px;
+    color: #c7c7c7;
+}
+.sponsor-row{
+    padding-top: 70px;
 }
 
 
