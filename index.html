@@ -40,7 +40,7 @@
 
     h1{
         font-family: DIN-Bold;
-        font-size: 32px;
+        font-size: 36px;
         text-transform: uppercase;
         margin-bottom: 50px;
     }
@@ -162,8 +162,14 @@
         margin: 10px;
     }
 
-    .active-circle{
+    .active-circle-experiment{
         background-color: #FFB900;
+    }
+    .active-circle-build{
+        background-color: #66BFBF;
+    }
+    .active-circle-ideas{
+        background-color: #4C4491;
     }
 
     .float_center {
@@ -221,7 +227,7 @@
 
 
 
-    <section style="padding-top: 75px;">
+   <section style="padding-top: 75px;" class="wow fadeIn" data-wow-delay=".2s">
         <div style="position: absolute; margin-left: 15%; margin-top: 6%;">
             <div class="homepage-title">LA HACKS</div>
             <div class="homepage-sub-title">Learn It. Build It.</div>
@@ -238,7 +244,7 @@
             </p>
         </div>
         <svg width="1518px" style="width: 100%; max-width: 1500px; display: block; margin: auto;" viewBox="0 0 1518 1687" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+
             <title>Group 5</title>
             <desc>Created with Sketch.</desc>
             <defs></defs>
@@ -774,7 +780,7 @@
                             </g>
                             <rect id="Rectangle-3" x="24.7031644" y="25.3446297" width="40.305163" height="40.5223024" rx="1.58155932"></rect>
                         </g>
-                        <g id="third" opacity="0.5" transform="translate(419.000000, 645.500000) rotate(-15.000000) translate(-419.000000, -645.500000) translate(374.000000, 600.000000)">
+                        <g id="third" opacity="0.5" data-bottom="transform: translateY(600px) translateX(389.721143px) rotate(10deg);" data-top="transform: translateY(600px) translateX(419px) rotate(0deg);" transform="translate(419.000000, 645.500000) rotate(-15.000000) translate(-419.000000, -645.500000) translate(374.000000, 600.000000)">
                             <g id="Group-2" fill="#FFFFFF">
                                 <rect id="Rectangle" x="0" y="0.508379888" width="25.8677308" height="90.194802" rx="3.63789474"></rect>
                                 <rect id="Rectangle" transform="translate(44.855746, 77.699637) rotate(90.000000) translate(-44.855746, -77.699637) " x="31.9218805" y="32.6022358" width="25.8677308" height="90.194802" rx="3.63789474"></rect>
@@ -792,7 +798,7 @@
                             </g>
                             <rect id="Rectangle-3" x="24.7031644" y="25.3446297" width="40.305163" height="40.5223024" rx="1.58155932"></rect>
                         </g>
-                        <g id="second" opacity="0.8" transform="translate(62.000000, 285.500000) rotate(30.000000) translate(-62.000000, -285.500000) translate(17.000000, 240.000000)">
+                        <g id="second" opacity="0.8" data-bottom="transform: translateY(240px) translateX(100px) rotate(50deg);" data-top="transform: translateY(240px) translateX(419px) rotate(0deg);" transform="translate(62.000000, 285.500000) rotate(30.000000) translate(-62.000000, -285.500000) translate(17.000000, 240.000000)">
                             <g id="Group-2" fill="#FFFFFF">
                                 <rect id="Rectangle" x="0" y="0.508379888" width="25.8677308" height="90.194802" rx="3.63789474"></rect>
                                 <rect id="Rectangle" transform="translate(44.855746, 77.699637) rotate(90.000000) translate(-44.855746, -77.699637) " x="31.9218805" y="32.6022358" width="25.8677308" height="90.194802" rx="3.63789474"></rect>
@@ -801,7 +807,7 @@
                             </g>
                             <rect id="Rectangle-3" x="24.7031644" y="25.3446297" width="40.305163" height="40.5223024" rx="1.58155932"></rect>
                         </g>
-                        <g id="first" opacity="0.8" transform="translate(289.721143, 165.904156) rotate(-30.000000) translate(-289.721143, -165.904156) translate(244.721143, 120.404156)">
+                        <g id="first" opacity="0.8" data-bottom="transform: translateY(120.404156px) translateX(289.721143px) rotate(30deg);" data-top="transform: translateY(120.404156px) translateX(419px) rotate(0deg);" transform="translate(289.721143, 165.904156) rotate(-30.000000) translate(-289.721143, -165.904156) translate(244.721143, 120.404156)">
                             <g id="Group-2" fill="#FFFFFF">
                                 <rect id="Rectangle" x="0" y="0.508379888" width="25.8677308" height="90.194802" rx="3.63789474"></rect>
                                 <rect id="Rectangle" transform="translate(44.855746, 77.699637) rotate(90.000000) translate(-44.855746, -77.699637) " x="31.9218805" y="32.6022358" width="25.8677308" height="90.194802" rx="3.63789474"></rect>
@@ -900,7 +906,7 @@
         <div style="padding-top: 50px;" class="float_center">
             <a id="ideas_link" class="child float_center"><div id="ideas_circle"class="circle"></div></a>
             <a id="build_link" class="child float_center"><div id="build_circle" class="circle"></div></a>
-            <a id="experiment_link"class="child float_center"><div id="experiment_circle" class="active-circle circle"></div></a>
+            <a id="experiment_link"class="child float_center"><div id="experiment_circle" class="active-circle-experiment circle"></div></a>
         </div>
     </div>
 </section>
@@ -987,25 +993,25 @@
     jQuery(document).ready(function(){
         jQuery('#experiment_link').on('click', function(event) {
             jQuery('#experiment').show();
-            jQuery('#experiment_circle').addClass("active-circle");
-            jQuery('#build_circle').removeClass("active-circle");
-            jQuery('#ideas_circle').removeClass("active-circle");
+            jQuery('#experiment_circle').addClass("active-circle-experiment");
+            jQuery('#build_circle').removeClass("active-circle-build");
+            jQuery('#ideas_circle').removeClass("active-circle-ideas");
             jQuery('#build').hide();
             jQuery('#ideas').hide();
         });
         jQuery('#build_link').on('click', function(event) {
             jQuery('#build').show();
-            jQuery('#build_circle').addClass("active-circle");
-            jQuery('#experiment_circle').removeClass("active-circle");
-            jQuery('#ideas_circle').removeClass("active-circle");
+            jQuery('#build_circle').addClass("active-circle-build");
+            jQuery('#experiment_circle').removeClass("active-circle-experiment");
+            jQuery('#ideas_circle').removeClass("active-circle-ideas");
             jQuery('#experiment').hide();
             jQuery('#ideas').hide();
         });
         jQuery('#ideas_link').on('click', function(event) {
             jQuery('#ideas').show();
-            jQuery('#ideas_circle').addClass("active-circle");
-            jQuery('#experiment_circle').removeClass("active-circle");
-            jQuery('#build_circle').removeClass("active-circle");
+            jQuery('#ideas_circle').addClass("active-circle-ideas");
+            jQuery('#experiment_circle').removeClass("active-circle-experiment");
+            jQuery('#build_circle').removeClass("active-circle-build");
             jQuery('#experiment').hide();
             jQuery('#build').hide();
         });
