@@ -123,6 +123,10 @@ li{
     margin-left: 15%;
     margin-top: 6%;
 }
+.homepage-small-section{
+    text-align: center;
+    padding-top: 110px;
+}
 
 .homepage-title{
     font-family: DIN-Bold;
@@ -139,9 +143,6 @@ li{
     margin-top: 20px;
     font-size: 18px;
 }
-
-
-
 
 
 
@@ -173,8 +174,11 @@ li{
 a.float_center{
     border: 0 !important;
 }
-.top-section{
+.top-big-section{
     padding-top: 155px;
+}
+.top-small-section{
+    display: none;
 }
 .second-section-block{
     position: absolute;
@@ -191,6 +195,15 @@ a.float_center{
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.small-section{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.unnecessary-block{
+
+}
 .circle-section{
     padding-top: 50px;
 }
@@ -204,8 +217,55 @@ a.float_center{
 .sponsor-row{
     padding-top: 70px;
 }
+.our-values-bottom-padding{
+    height: 100px;
+}
 
 
+
+
+@media(max-width: 1080px){
+    .our-values-bottom-padding{
+        height: 200px;
+    }
+    .second-section-block{
+        margin-top: 65%;
+    }
+    .third-section-block{
+        margin-top: 117%;
+    }
+    .unnecessary-block{
+        display: none;
+    }
+}
+
+@media(max-width: 991px){
+    .top-big-section{
+        display: none;
+    }
+    .top-small-section{
+        display: inline;
+    }
+    .homepage-title{
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .homepage-sub-title{
+        font-size: 24px;
+    }
+    .homepage-info{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 700px){
+    .small-section{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
 
 
 
@@ -214,13 +274,15 @@ a.float_center{
 
 .faq-background{
     background-image: linear-gradient(330deg, #4C4491 0%, #FD5C63 100%);
-    /*background-image: linear-gradient(180deg, rgba(102, 191, 191, 1) 0%, #409999 80%);*/
+    /*background-image: linear-gradient(330deg, #4C4491 0%, #66BFBF 100%);*/
+    /*background-image: linear-gradient(345deg, rgba(255,185,0,0.50) 0%, #FD5C63 70%);*/
+    /*background-image: linear-gradient(345deg, rgba(255,185,0,0.50) 0%, #66BFBF 70%);*/
     color: white;
 }
 
 .data-hacks-background{
-    /*background-image: linear-gradient(345deg, rgba(255,185,0,0.50) 0%, #FD5C63 70%);*/
-    background-image: linear-gradient(330deg, #4C4491 0%, #FD5C63 100%);
+    background-image: linear-gradient(345deg, rgba(255,185,0,0.50) 0%, #FD5C63 70%);
+    /*background-image: linear-gradient(330deg, #4C4491 0%, #FD5C63 100%);*/
     /*background-image: linear-gradient(180deg, rgba(102, 191, 191, 1) 0%, #409999 80%);8?*/
     color: white;
 }
