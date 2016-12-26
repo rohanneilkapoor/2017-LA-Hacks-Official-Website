@@ -367,6 +367,15 @@ article.clients span {
 }
 
 @media(max-width: 767px){
+    .big-logo{
+        width: 250px;
+    }
+    .med-logo{
+        width:128px;
+    }
+    .small-logo{
+        width:85px;
+    }
     .small-our-values{
         display:none;
     }
@@ -390,6 +399,17 @@ article.clients span {
     .small-extra-section{
         padding-left: 5%;
         padding-right: 5%;
+    }
+}
+@media(max-width: 600px){
+    article.big-clients{
+        width: 100%;
+    }
+    article.med-clients{
+        width: 100%;
+    }
+    article.small-clients{
+        width:50%
     }
 }
 
