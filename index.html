@@ -27,7 +27,7 @@
 </head>
 <body>
 
-    <!--<nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05);">
+    <nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05);">
         <div class="container">
             <div class="navbar-header navbar-right">
                 <ul class="nav navbar-nav">
@@ -58,7 +58,7 @@
         </div>
 
 
-    </nav>-->
+    </nav>
 
 
 
@@ -1452,8 +1452,7 @@
                 </div>
             </div>
         </div>
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-        <svg style="width: 29.5%; position: absolute; top: 220%; right: 0%;"viewBox="0 0 447 930" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="small-our-values" viewBox="0 0 447 930" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
             <title>Group 6</title>
             <desc>Created with Sketch.</desc>
@@ -1667,14 +1666,14 @@
     <section class="data-hacks-background">
         <div class="container section" style="padding-bottom: 50px;">
             <h1 class="solo-title" style="color: white; text-align: center;">Introducing Data Hacks</h1>
-            <p style="text-align: center; padding-left: 30%; padding-right: 30%;">This year at LA Hacks we’ll be introducing a
+            <p class="data-hacks-spacing">This year at LA Hacks we’ll be introducing a
                 separate track for data hackers. Come build
                 and work with tools for mining,
                 visualizations, and more. Data hacks will
                 be judged and prized in a separate category
                 from non-data hacks.</p>
         </div>
-        <img src="images/data-vis.svg" style="width: 100%; position: relative; bottom: 0px;">
+        <img src="images/data-vis.svg" style="display: block; margin: 0 auto; width: 100%; min-width: 1150px; max-width: 1400px; position: relative; bottom: 0px;">
     </section>
 
 <section class="section">
@@ -1682,7 +1681,7 @@
         <div id="experiment">
             <div class="row va vertical-align" >
                 <div class="col-sm-6">
-                    <img src="images/experiment.gif" class="full-image">
+                    <img src="images/experiment.gif" class="la-hackers">
                 </div>
                 <div class="col-sm-6">
                     <div>
@@ -1698,7 +1697,7 @@
         <div id="build">
             <div class="row va vertical-align">
                 <div class="col-sm-6">
-                    <img src="images/build.gif" class="full-image">
+                    <img src="images/build.gif" class="la-hackers">
                 </div>
                 <div class="col-sm-6">
                     <div>
@@ -1715,7 +1714,7 @@
         <div id="ideas">
             <div class="row va vertical-align" >
                 <div class="col-sm-6">
-                    <img src="images/ideas.gif" class="full-image">
+                    <img src="images/ideas.gif" class="la-hackers">
                 </div>
                 <div class="col-sm-6">
                     <div>
@@ -1845,6 +1844,7 @@
     var s = skrollr.init();
     new WOW().init();
     jQuery(document).ready(function(){
+        var windowWidth = $(window).width();
         jQuery('#experiment_link').on('click', function(event) {
             jQuery('#experiment').fadeIn();
             jQuery('#experiment_circle').addClass("active-circle-experiment");
@@ -1869,6 +1869,28 @@
             jQuery('#experiment').hide();
             jQuery('#build').hide();
         });
+        jQuery(document).ready(function($) {
+            var windowWidth = $(window).width();
+
+            $(window).on('load', function () {
+
+                $('.va').toggleClass('vertical-align', $(window).width() > 776);
+
+
+            }).trigger('load');
+
+
+
+            $(window).on('resize', function () {
+                if ($(window).width() != windowWidth){
+                    windowWidth = $(window).width();
+                    $('.va').toggleClass('vertical-align', $(window).width() > 776);
+                }
+
+            }).trigger('resize');
+
+        });
+
     });
     $(window).scroll(function(){
         //$(".top-tag").css("opacity", 2.9 - $(window).scrollTop() / 500);
