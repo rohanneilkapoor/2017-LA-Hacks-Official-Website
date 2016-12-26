@@ -27,7 +27,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05);">
+    <!--<nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05);">
         <div class="container">
             <div class="navbar-header navbar-right">
                 <ul class="nav navbar-nav">
@@ -58,7 +58,7 @@
         </div>
 
 
-    </nav>
+    </nav>-->
 
 
 
@@ -1102,9 +1102,9 @@
             <div class="homepage-info">March 31 - April 2 2017<br>Pauley Pavilion, UCLA</div>
         </div>
         <div style="height: 100px;"></div>
-        <div class="small-section wow fadeIn" data-wow-delay=".05s" data-wow-offset="200">
-                <h1 class="solo-title">What is LA Hacks?</h1>
-                <p>
+        <div class="small-section wow fadeIn row" data-wow-delay=".05s" data-wow-offset="200">
+                <h1 class="solo-title col-sm-12">What is LA Hacks?</h1>
+                <p class="col-sm-12">
                     LA Hacks is a weekend dedicated to you and 999 other students
                     in Pauley Pavilion. Collaborate and build creative solutions
                     to problems, while pushing the limits of your mind and body to
@@ -1433,7 +1433,7 @@
                 </g>
             </g>
         </svg>
-        <div class="small-section wow fadeIn" data-wow-delay=".05s" data-wow-offset="200">
+        <div class="small-section wow fadeIn" style="padding-top: 60px;" data-wow-delay=".05s" data-wow-offset="200">
             <div class="row">
                 <div class=" col-sm-8 block">
                     <h1 style="color: #FD5C63">Our Values</h1>
@@ -1676,8 +1676,9 @@
         <img src="images/data-vis.svg" style="display: block; margin: 0 auto; width: 100%; min-width: 1150px; max-width: 1400px; position: relative; bottom: 0px;">
     </section>
 
-<section class="section">
+<section class="section small-extra-section">
     <div class="container">
+        <h1 class="small-la-hackers-title">LA Hackers</h1>
         <div id="experiment">
             <div class="row va vertical-align" >
                 <div class="col-sm-6">
@@ -1741,9 +1742,10 @@
 
 
 
-<section class="faq-background">
-    <div class="container section">
-            <h1>Frequently asked questions</h1>
+<section class="faq-background small-extra-section section small-section">
+            <div class="row">
+                <h1 class="col-sm-12">Frequently asked questions</h1>
+            </div>
             <div class="row">
                 <div class="col-sm-5 block">
                     <h2>Who can attend?</h2>
@@ -1761,8 +1763,6 @@
                         are still encouraged to apply and reimbursements
                         for travel will be granted on a case by case basis.</p>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-sm-5 block">
                     <h2>What can my team build?</h2>
                     <p>Whatever hardware, software, or technology-related
@@ -1778,8 +1778,6 @@
                         of the hacking period. You can also compete alone, but
                         that’s a lot less fun!</p>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-sm-5 block">
                     <h2>What should I bring?</h2>
                     <p>All attendees are required to bring their valid
@@ -1795,32 +1793,47 @@
                         feel free to reach out to us on <a>Twitter</a> or <a>Facebook</a>.</p>
                 </div>
             </div>
-        </div>
+
 
     </section>
 
-    <section class="section">
-        <div class="container">
-            <h1 class="solo-title">Our Sponsors</h1>
-            <h2>
-                To those who make this possible, we thank you!
+    <section class="section section small-section small-extra-section">
+        <div class="row " style="text-align: center; padding-bottom: 50px;">
+            <h1 class="solo-title col-sm-12" style="margin-bottom: 0;">Our Sponsors</h1>
+            <h2 class="col-sm-12">
+                To those who make this possible, we thank you.
             </h2>
-            <div class="row va vertical-align sponsor-row">
-                <div class="col-md-5"><img class="top-image" src="images/2016_sponsor_logos/Symantec/logo.png"></div>
-                <div class="col-md-5"><img class="top-image" src="images/2016_sponsor_logos/disney/logo.png"></div>
-            </div>
-            <div class="row va vertical-align sponsor-row">
-                <div class="col-md-3"><img class="sub-image" src="images/2016_sponsor_logos/Microsoft/logo.png"></div>
-                <div class="col-md-3"><img class="sub-image" src="images/2016_sponsor_logos/Taboola/logo.png"></div>
-                <div class="col-md-3"><img class="sub-image" src="images/2016_sponsor_logos/HBO/logo.png"></div>
-            </div>
-            <div class="row va vertical-align sponsor-row">
-                <div class="col-md-2"><img class="sub-image" src="images/2016_sponsor_logos/Google/logo.png"></div>
-                <div class="col-md-2"><img class="sub-image" src="images/2016_sponsor_logos/Bloomberg/logo.png"></div>
-                <div class="col-md-2"><img class="sub-image" src="images/2016_sponsor_logos/SpaceX/logo.jpg"></div>
-                <div class="col-md-2"><img class="sub-image" src="images/2016_sponsor_logos/Thiel/logo.png"></div>
-            </div>
         </div>
+        <article class="clients big-clients">
+            <span></span><img class="big-logo" src="images/2016_sponsor_logos/Symantec/logo.png" alt="logo" />
+        </article>
+
+        <article class="clients big-clients">
+            <span></span><img class="big-logo" src="images/2016_sponsor_logos/disney/logo.png" alt="logo" />
+        </article>
+        <article class="clients med-clients">
+            <span></span><img class="med-logo" src="images/2016_sponsor_logos/Microsoft/logo.png" alt="logo" />
+        </article>
+        <article class="clients med-clients">
+            <span></span><img class="med-logo" src="images/2016_sponsor_logos/Taboola/logo.png" alt="logo" />
+        </article>
+        <article class="clients med-clients">
+            <span></span><img class="med-logo" src="images/2016_sponsor_logos/HBO/logo.png" alt="logo" />
+        </article>
+        <article class="clients small-clients">
+            <span></span><img class="small-logo" src="images/2016_sponsor_logos/Google/logo.png" alt="logo" />
+        </article>
+        <article class="clients small-clients">
+            <span></span><img class="small-logo" src="images/2016_sponsor_logos/Bloomberg/logo.png" alt="logo" />
+        </article>
+        <article class="clients small-clients">
+            <span></span><img class="small-logo" src="images/2016_sponsor_logos/SpaceX/logo.jpg" alt="logo" />
+        </article>
+        <article class="clients small-clients">
+            <span></span><img class="small-logo" src="images/2016_sponsor_logos/Thiel/logo.png" alt="logo" />
+        </article>
+
+
     </section>
 
 
@@ -1874,7 +1887,7 @@
 
             $(window).on('load', function () {
 
-                $('.va').toggleClass('vertical-align', $(window).width() > 776);
+                $('.va').toggleClass('vertical-align', $(window).width() > 767);
 
 
             }).trigger('load');
@@ -1884,7 +1897,7 @@
             $(window).on('resize', function () {
                 if ($(window).width() != windowWidth){
                     windowWidth = $(window).width();
-                    $('.va').toggleClass('vertical-align', $(window).width() > 776);
+                    $('.va').toggleClass('vertical-align', $(window).width() > 767);
                 }
 
             }).trigger('resize');

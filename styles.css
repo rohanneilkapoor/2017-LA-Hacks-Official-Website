@@ -62,6 +62,12 @@ a:hover, a:focus, a:active{
     margin-bottom: 0;
     margin-top: 0;
 }
+.small-la-hackers-title{
+    color:#FD5C63;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: none;
+}
 .full-image{
     width: 100%;
 }
@@ -71,11 +77,25 @@ a:hover, a:focus, a:active{
     margin: 0 auto;
     max-width: 600px;
 }
-.top-image{
-    width: 90%;
+
+
+
+@media(max-width: 767px){
+    .la-hackers{
+        width: 50%;
+    }
+    .accompanied-title{
+        display:none;
+    }
+    .small-la-hackers-title{
+        display: block;
+        text-align: center;
+    }
 }
-.sub-image{
-    width: 70%;
+@media(max-width: 600px){
+    h1{
+        font-size: 30px;
+    }
 }
 
 
@@ -205,8 +225,11 @@ a.float_center{
 .small-section{
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 100px;
+}
+.small-extra-section{
+
 }
 .unnecessary-block{
 
@@ -242,6 +265,45 @@ a.float_center{
 .small-la-hackers{
     color: #FD5C63;
     text-align: center;
+}
+article.clients {
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 150px;
+    margin-bottom: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+article.big-clients{
+    width: 50%;
+}
+article.med-clients{
+    width: 33.333%;
+}
+article.small-clients{
+    width:25%
+}
+
+article.clients * {
+    vertical-align: middle;
+}
+
+article.clients span {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+}
+.big-logo{
+  width: 350px;
+}
+.med-logo{
+    width:180px;
+}
+.small-logo{
+    width:120px;
 }
 
 
@@ -285,11 +347,34 @@ a.float_center{
     .our-values-bottom-padding{
         height: 0;
     }
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .big-logo{
+        width: 300px;
+    }
+    .med-logo{
+        width:154px;
+    }
+    .small-logo{
+        width:102px;
+    }
 }
 
 @media(max-width: 767px){
     .small-our-values{
         display:none;
+    }
+    .small-extra-section{
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }
 
@@ -299,6 +384,10 @@ a.float_center{
         padding-right: 5%;
     }
     .small-section{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .small-extra-section{
         padding-left: 5%;
         padding-right: 5%;
     }
