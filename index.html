@@ -27,7 +27,7 @@
 
 </head>
 <body>
-
+<div style="overflow-x:hidden;" id="skrollr-body">
     <nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05); height: 81px;">
         <div class="container" id="collapse-shadow">
             <div class="navbar-header">
@@ -1529,7 +1529,8 @@
 </footer>
 <script type="text/javascript" src="skrollr.min.js"></script>
 <script>
-    var s = skrollr.init();
+    function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
+
     new WOW().init();
     jQuery(document).ready(function(){
         var windowWidth = $(window).width();
@@ -1563,7 +1564,12 @@
             $(window).on('load', function () {
 
                 $('.va').toggleClass('vertical-align', $(window).width() > 767);
-
+                if ($(window).width() <= 650) {
+                    skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+                }
+                if ($(window).width() > 650) {
+                    skrollr.init();
+                }
 
             }).trigger('load');
 
@@ -1574,8 +1580,15 @@
                     windowWidth = $(window).width();
                     $('.va').toggleClass('vertical-align', $(window).width() > 767);
                 }
+                if ($(window).width() <= 650) {
+                    skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+                }
+                if ($(window).width() > 650) {
+                    skrollr.init();
+                }
 
             }).trigger('resize');
+
 
         });
         $(document).on('click', 'a', function(event){
@@ -1594,5 +1607,6 @@
 
 
 </script>
+</div>
 </body>
 </html>
