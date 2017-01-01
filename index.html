@@ -1569,12 +1569,6 @@
             $(window).on('load', function () {
 
                 $('.va').toggleClass('vertical-align', $(window).width() > 767);
-                /*if ($(window).width() <= 650) {
-                    skrollr.init().destroy(); // skrollr.init() returns the singleton created above
-                }
-                if ($(window).width() > 650) {
-                    skrollr.init();
-                }*/
 
             }).trigger('load');
 
@@ -1585,12 +1579,6 @@
                     windowWidth = $(window).width();
                     $('.va').toggleClass('vertical-align', $(window).width() > 767);
                 }
-                /*if ($(window).width() <= 650) {
-                    skrollr.init().destroy(); // skrollr.init() returns the singleton created above
-                }
-                if ($(window).width() > 650) {
-                    skrollr.init();
-                }*/
 
             }).trigger('resize');
 
