@@ -23,39 +23,41 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="wow.min.js"></script>
+    <script src="https://use.fontawesome.com/c04fa02ea7.js"></script>
 
 </head>
 <body>
 
     <nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05); height: 81px;">
-        <div class="container">
-            <div class="navbar-header navbar-left">
-                <ul class="nav navbar-nav">
+        <div class="container" id="collapse-shadow">
+            <div class="navbar-header">
+
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <li class="la-hacks-logo">
-                        <img src="images/lahacks_logo.svg">
-                    </li>
-                </ul>
+
+                <a id="nav_home_big" href="#home_big" class="nav-link la-hacks-logo"><img style="padding-top: 10px; padding-left: 35px;" src="images/lahacks_logo.svg"></a>
+                <a id="nav_home_small" href="#home_small" class="nav-link la-hacks-logo"><img style="padding-top: 10px; padding-left: 35px;" src="images/lahacks_logo.svg"></a>
+
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
-                <div class="navbar-header navbar-right">
+                <div class=" navbar-right">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a class="nav-link">ABOUT</a>
+                            <a id="nav_about_big" href="#about_big" class="nav-link">ABOUT</a>
+                            <a id="nav_about_small" href="#about_small" class="nav-link">ABOUT</a>
                         </li>
                         <li>
-                            <a class="nav-link">HACKERS</a>
+                            <a href="#hackers" class="nav-link">HACKERS</a>
                         </li>
                         <li>
-                            <a class="nav-link">FAQ</a>
+                            <a href="#faq" class="nav-link">FAQ</a>
                         </li>
-                        <li>
-                            <a class="nav-link">SPONSORS</a>
+                        <li class="sponsors-padding">
+                            <a href="#sponsors" class="nav-link">SPONSORS</a>
                         </li>
 
                     </ul>
@@ -65,17 +67,13 @@
         </div>
 
 
+
     </nav>
 
 
     <div>
-    <section class="top-big-section wow fadeIn" data-wow-delay=".2s">
-        <!--<div class="homepage-section">
-            <div class="homepage-title">LA HACKS</div>
-            <div class="homepage-sub-title">Learn It. Build It.</div>
-            <div class="homepage-info">March 31 - April 2 2017<br>Pauley Pavilion, UCLA</div>
-        </div>-->
-        <div class="second-section-block wow fadeIn" data-wow-delay=".05s" data-wow-offset="400">
+    <section id="home_big" class="top-big-section wow fadeIn" data-wow-delay=".2s">
+        <div id="about_big" class="second-section-block wow fadeIn" data-wow-delay=".05s" data-wow-offset="400">
             <h1 class="solo-title">What is LA Hacks?</h1>
             <p>
                 LA Hacks is a weekend dedicated to you and 999 other students
@@ -769,7 +767,7 @@
 
     </section>
     </div>
-    <section class="top-small-section">
+    <section id="home_small" class="top-small-section ">
         <div class="homepage-small-section">
             <img src="images/event_logo.svg" style="width: 300px; padding-bottom: 50px;">
             <div class="homepage-title">LA HACKS</div>
@@ -777,7 +775,7 @@
             <div class="homepage-info">March 31 - April 2 2017<br>Pauley Pavilion, UCLA</div>
         </div>
         <div style="height: 100px;"></div>
-        <div class="small-section wow fadeIn row" data-wow-delay=".05s" data-wow-offset="200">
+        <div id="about_small" class="small-section wow fadeIn row" data-wow-delay=".05s" data-wow-offset="200">
                 <h1 class="solo-title col-sm-12">What is LA Hacks?</h1>
                 <p class="col-sm-12">
                     LA Hacks is a weekend dedicated to you and 999 other students
@@ -1352,7 +1350,7 @@
     </section>
 
 <section class="section small-extra-section">
-    <div class="container">
+    <div id="hackers" class="container">
         <h1 class="small-la-hackers-title">LA Hackers</h1>
         <div id="experiment">
             <div class="row va vertical-align" >
@@ -1417,7 +1415,7 @@
 
 
 
-<section class="faq-background small-extra-section section small-section">
+<section id="faq" class="faq-background small-extra-section section small-section">
             <div class="row">
                 <h1 class="col-sm-12">Frequently asked questions</h1>
             </div>
@@ -1472,59 +1470,61 @@
 
     </section>
 
-    <section class="section section small-section">
+    <section id="sponsors" class="section section small-section">
         <div class="row sponsors-header">
             <h1 class="solo-title col-sm-12" style="margin-bottom: 0;">Our Sponsors</h1>
             <h2 class="col-sm-12">
                 To those who make this possible, we thank you.
             </h2>
         </div>
-        <article class="clients big-clients">
-            <span></span><img class="big-logo" src="images/2016_sponsor_logos/Symantec/logo.png" alt="logo" />
-        </article>
+        <div class="logo-section">
+            <article class="clients big-clients">
+                <span></span><img class="big-logo" src="images/2016_sponsor_logos/Symantec/logo.png" alt="logo" />
+            </article>
 
-        <article class="clients big-clients">
-            <span></span><img class="big-logo" src="images/2016_sponsor_logos/disney/logo.png" alt="logo" />
-        </article>
-        <article class="clients med-clients">
-            <span></span><img class="med-logo" src="images/2016_sponsor_logos/Microsoft/logo.png" alt="logo" />
-        </article>
-        <article class="clients med-clients">
-            <span></span><img class="med-logo" src="images/2016_sponsor_logos/Taboola/logo.png" alt="logo" />
-        </article>
-        <article class="clients med-clients">
-            <span></span><img class="med-logo" src="images/2016_sponsor_logos/HBO/logo.png" alt="logo" />
-        </article>
-        <article class="clients small-clients">
-            <span></span><img class="small-logo" src="images/2016_sponsor_logos/Google/logo.png" alt="logo" />
-        </article>
-        <article class="clients small-clients">
-            <span></span><img class="small-logo" src="images/2016_sponsor_logos/Bloomberg/logo.png" alt="logo" />
-        </article>
-        <article class="clients small-clients">
-            <span></span><img class="small-logo" src="images/2016_sponsor_logos/SpaceX/logo.jpg" alt="logo" />
-        </article>
-        <article class="clients small-clients">
-            <span></span><img class="small-logo" src="images/2016_sponsor_logos/Thiel/logo.png" alt="logo" />
-        </article>
+            <article class="clients big-clients">
+                <span></span><img class="big-logo" src="images/2016_sponsor_logos/disney/logo.png" alt="logo" />
+            </article>
+            <article class="clients med-clients">
+                <span></span><img class="med-logo" src="images/2016_sponsor_logos/Microsoft/logo.png" alt="logo" />
+            </article>
+            <article class="clients med-clients">
+                <span></span><img class="med-logo" src="images/2016_sponsor_logos/Taboola/logo.png" alt="logo" />
+            </article>
+            <article class="clients med-clients">
+                <span></span><img class="med-logo" src="images/2016_sponsor_logos/HBO/logo.png" alt="logo" />
+            </article>
+            <article class="clients small-clients">
+                <span></span><img class="small-logo" src="images/2016_sponsor_logos/Google/logo.png" alt="logo" />
+            </article>
+            <article class="clients small-clients">
+                <span></span><img class="small-logo" src="images/2016_sponsor_logos/Bloomberg/logo.png" alt="logo" />
+            </article>
+            <article class="clients small-clients">
+                <span></span><img class="small-logo" src="images/2016_sponsor_logos/SpaceX/logo.jpg" alt="logo" />
+            </article>
+            <article class="clients small-clients">
+                <span></span><img class="small-logo" src="images/2016_sponsor_logos/Thiel/logo.png" alt="logo" />
+            </article>
 
-
+        </div>
     </section>
 
 
 
 
 <footer class="footer wow fadeIn" data-wow-delay=".5s">
-    <div id="company-footer" class="container text-center">
-        <a class="link" id="company">
-
-        </a>
-
-    </div>
-    <div id="student-footer" class="container text-center">
-        <a class="link" id="student">
-
-        </a>
+    <div class="container text-center" style="padding-bottom: 35px;">
+        <img src="images/lahacks_logo.svg" style="width:30px;">
+        <div style="padding-top: 15px;">
+            Copyright © 2016 LA Hacks
+        </div>
+        <div>
+            <i onclick="window.location.href='https://www.facebook.com/LAHacks/?fref=ts'" class="fa fa-facebook" aria-hidden="true"></i>
+            <i onclick="window.location.href='https://twitter.com/lahacks'" class="fa fa-twitter" aria-hidden="true"></i>
+            <i onclick="window.location.href='https://www.snapchat.com/add/lahacks'" class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+            <i onclick="window.location.href='mailto:info@lahacks.com'" class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
     </div>
 </footer>
 <script type="text/javascript" src="skrollr.min.js"></script>
@@ -1578,10 +1578,18 @@
             }).trigger('resize');
 
         });
+        $(document).on('click', 'a', function(event){
+            event.preventDefault();
 
-    });
-    $(window).scroll(function(){
-        //$(".top-tag").css("opacity", 2.9 - $(window).scrollTop() / 500);
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 'fast');
+        });
+        $('.nav a').on('click', function(){
+            $('.btn-navbar').click(); //bootstrap 2.x
+            $('.navbar-toggle').click() //bootstrap 3.x by Richard
+        });
+
     });
 
 
