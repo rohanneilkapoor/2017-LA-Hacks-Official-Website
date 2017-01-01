@@ -28,7 +28,7 @@
 </head>
 <body>
 <div style="overflow-x:hidden;" id="skrollr-body">
-    <nav class="navbar navbar-custom navbar-fixed-top " role="navigation" style="background-color: white; box-shadow: 0 5px 10px 0 rgba(0,0,0,.05); height: 81px;">
+    <nav class="navbar navbar-custom navbar-fixed-top custom-nav-changes" role="navigation">
         <div class="container" id="collapse-shadow">
             <div class="navbar-header">
 
@@ -84,10 +84,10 @@
             </p>
         </div>
        <div class="third-section-block wow fadeIn" data-wow-delay=".05s" data-wow-offset="200">
-           <h1 style="color: #FD5C63">Our Values</h1>
+           <h1 class="our-values-heading">Our Values</h1>
            <div class="row">
                <div class=" col-sm-5 block">
-                   <h2 style="color: #4C4491">Inclusivity</h2>
+                   <h2 class="our-values-sub-heading">Inclusivity</h2>
                    <p>We make sure you have everything you need to carry out
                        your craziest ideas—amazing mentors, delicious food,
                        and a fun work environment.</p>
@@ -95,7 +95,7 @@
            </div>
            <div class="row">
                <div class="col-sm-5 block">
-                   <h2 style="color: #4C4491">Learning</h2>
+                   <h2 class="our-values-sub-heading">Learning</h2>
                    <p>Get personalized help from mentor teams comprised
                        of UCLA’s best and brightest. Collaborate with
                        your peers and learn from industry leaders.</p>
@@ -103,7 +103,7 @@
            </div>
            <div class="row">
                <div class="col-sm-5 block">
-                   <h2 style="color: #4C4491">Community</h2>
+                   <h2 class="our-values-sub-heading">Community</h2>
                    <p>Take a break from your hack to enjoy games,
                        guest speakers, and other special events.
                        Make new friends or even network with our sponsors.</p>
@@ -769,7 +769,7 @@
     </div>
     <section id="home_small" class="top-small-section ">
         <div class="homepage-small-section">
-            <img src="images/event_logo.svg" style="width: 300px; padding-bottom: 50px;">
+            <img src="images/event_logo.svg" class="small-event-logo">
             <div class="homepage-title">LA HACKS</div>
             <div class="homepage-sub-title">Learn It. Build It.</div>
             <div class="homepage-info">March 31 - April 2 2017<br>Pauley Pavilion, UCLA</div>
@@ -1109,16 +1109,16 @@
         <div class="small-section wow fadeIn" style="padding-top: 60px;" data-wow-delay=".05s" data-wow-offset="200">
             <div class="row">
                 <div class=" col-sm-8 block">
-                    <h1 style="color: #FD5C63">Our Values</h1>
-                    <h2 style="color: #4C4491">Inclusivity</h2>
+                    <h1 class="our-values-heading">Our Values</h1>
+                    <h2 class="our-values-sub-heading">Inclusivity</h2>
                     <p style="padding-bottom: 30px">We make sure you have everything you need to carry out
                         your craziest ideas—amazing mentors, delicious food,
                         and a fun work environment.</p>
-                    <h2 style="color: #4C4491">Learning</h2>
+                    <h2 class="our-values-sub-heading">Learning</h2>
                     <p style="padding-bottom: 30px">Get personalized help from mentor teams comprised
                         of UCLA’s best and brightest. Collaborate with
                         your peers and learn from industry leaders.</p>
-                    <h2 style="color: #4C4491">Community</h2>
+                    <h2 class="our-values-sub-heading">Community</h2>
                     <p>Take a break from your hack to enjoy games,
                         guest speakers, and other special events.
                         Make new friends or even network with our sponsors.</p>
@@ -1338,7 +1338,7 @@
     <section class="our-values-bottom-padding"></section>
     <section class="data-hacks-background">
         <div class="container section" style="padding-bottom: 50px;">
-            <h1 class="solo-title" style="color: white; text-align: center;">Introducing Data Hacks</h1>
+            <h1 class="solo-title data-vis-title">Introducing Data Hacks</h1>
             <p class="data-hacks-spacing">This year at LA Hacks we’ll be introducing a
                 separate track for data hackers. Come build
                 and work with tools for mining,
@@ -1346,7 +1346,7 @@
                 be judged and prized in a separate category
                 from non-data hacks.</p>
         </div>
-        <img src="images/data-vis.svg" style="display: block; margin: 0 auto; width: 100%; min-width: 1150px; max-width: 1400px; position: relative; bottom: 0px;">
+        <img src="images/data-vis.svg" class="data-vis">
     </section>
 
 <section class="section small-extra-section">
@@ -1514,8 +1514,8 @@
 
 
 <footer class="footer wow fadeIn" data-wow-delay=".5s">
-    <div class="container text-center" style="padding-bottom: 35px;">
-        <img src="images/lahacks_logo.svg" style="width:30px;">
+    <div class="container text-center footer">
+        <img src="images/lahacks_logo.svg" class="small-footer-logo">
         <div style="padding-top: 15px;">
             Copyright © 2016 LA Hacks
         </div>
@@ -1532,6 +1532,11 @@
     function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
 
     new WOW().init();
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        skrollr.init({
+            forceHeight: false
+        });
+    }
     jQuery(document).ready(function(){
         var windowWidth = $(window).width();
         jQuery('#experiment_link').on('click', function(event) {
@@ -1564,12 +1569,12 @@
             $(window).on('load', function () {
 
                 $('.va').toggleClass('vertical-align', $(window).width() > 767);
-                if ($(window).width() <= 650) {
+                /*if ($(window).width() <= 650) {
                     skrollr.init().destroy(); // skrollr.init() returns the singleton created above
                 }
                 if ($(window).width() > 650) {
                     skrollr.init();
-                }
+                }*/
 
             }).trigger('load');
 
@@ -1580,12 +1585,12 @@
                     windowWidth = $(window).width();
                     $('.va').toggleClass('vertical-align', $(window).width() > 767);
                 }
-                if ($(window).width() <= 650) {
+                /*if ($(window).width() <= 650) {
                     skrollr.init().destroy(); // skrollr.init() returns the singleton created above
                 }
                 if ($(window).width() > 650) {
                     skrollr.init();
-                }
+                }*/
 
             }).trigger('resize');
 
