@@ -167,18 +167,18 @@ li{
 
 .homepage-title{
     font-family: DIN-Bold;
-    font-size: 60px;
+    font-size:74px;
     color: #FD5C63;
-    line-height: 60px;
+    line-height: 72px;
 }
 
 .homepage-sub-title{
-    font-size: 28px;
+    font-size: 36px;
     color: #FD5C63;
 }
 .homepage-info{
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 23px;
 }
 
 
@@ -281,20 +281,22 @@ article.clients {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    height: 150px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
 article.big-clients{
     width: 50%;
+    height: 200px;
 }
 article.med-clients{
     width: 33.333%;
+    height: 150px;
 }
 article.small-clients{
-    width:25%
+    width:25%;
+    height: 100px;
 }
 
 article.clients * {
@@ -315,10 +317,45 @@ article.clients span {
 .small-logo{
     width:120px;
 }
+.sponsors-header{
+    text-align: center;
+    padding-bottom: 100px;
+}
 
 
 
-
+@media(min-width: 1400px){
+    .second-section-block{
+        margin-left: 12%;
+    }
+    .third-section-block{
+        margin-left: 12%;
+    }
+}
+@media(min-width: 1600px){
+    .second-section-block{
+        margin-left: 15%;
+    }
+    .third-section-block{
+        margin-left: 15%;
+    }
+}
+@media(min-width: 1800px){
+    .second-section-block{
+        margin-left: 18%;
+    }
+    .third-section-block{
+        margin-left: 18%;
+    }
+}
+@media(min-width: 2000px){
+    .second-section-block{
+        margin-left: 21%;
+    }
+    .third-section-block{
+        margin-left: 21%;
+    }
+}
 @media(max-width: 1080px){
     .second-section-block{
         margin-top: 65%;
@@ -377,6 +414,9 @@ article.clients span {
 }
 
 @media(max-width: 767px){
+    .sponsors-header{
+        padding-bottom: 50px;
+    }
     .big-logo{
         width: 250px;
     }
@@ -394,6 +434,16 @@ article.clients span {
         padding-right: 10%;
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    article.big-clients{
+
+        height: 150px;
+    }
+    article.med-clients{
+        height: 100px;
+    }
+    article.small-clients{
+        height: 50px;
     }
 }
 
@@ -445,7 +495,6 @@ article.clients span {
 
 .top-illustration{
     width: 100%;
-    max-width: 1500px;
     display: block;
     margin: auto;
 }
